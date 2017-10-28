@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>支付面板</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/payPanel.css" />
+	</head>
+<style>
+</style>
+	<body >
+		<button>打开支付面板</button>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/payPanel.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			mui.init()
+			mui("body").on("tap","button",function(){
+				payPanel.showPanel(function(){
+					alert("输入完成....");
+					payPanel.closePanel();
+					//payPanel.isShow;该属性能够判断面板是否关闭，可用于点击返回键时判断如果面板没关闭就关闭面板，而不是返回上个页面
+				});
+			})
+			
+			
+		</script>
+	</body>
+
+</html>
